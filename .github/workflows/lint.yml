@@ -32,5 +32,6 @@ jobs:
 
       - name: Run linter
         # Run Linter
-        run: |
-          make lint
+        run: make lint
+        env:
+          CI: true
