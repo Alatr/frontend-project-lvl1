@@ -21,7 +21,9 @@
 	"bin": {
 		"brain-games": "./bin/brain-games.js",
 		"brain-even": "./bin/brain-even.js",
-		"brain-calc": "./bin/brain-calc.js"
+		"brain-calc": "./bin/brain-calc.js",
+		"brain-progression": "./bin/brain-progression.js",
+		"brain-nod": "./bin/brain-nod.js"
 	},
 	"type": "module",
 	"homepage": "https://github.com/Alatr/frontend-project-lvl1#readme",

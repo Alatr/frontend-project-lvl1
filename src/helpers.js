@@ -20,3 +20,25 @@ export const getRandomIntInclusive = (min, max) => {
 };
 
 export const isEven = (number) => (+number % 2 === 0);
+
+export const NOD = (x, y) => {
+  if (y > x) return NOD(y, x);
+  if (!y) return x;
+  return NOD(y, x % y);
+};
+
+export const progression = (length, progressionNum) => {
+  let acc = progressionNum;
+  const res = [];
+  for (let i = 0; i < length; i += 1) {
+    const rempAcc = acc;
+    if (i === 0) {
+      res.push(acc);
+    }
+    if (i !== 0) {
+      acc = rempAcc + progressionNum;
+      res.push(acc);
+    }
+  }
+  return res;
+};
