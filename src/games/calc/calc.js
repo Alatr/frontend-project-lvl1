@@ -1,7 +1,9 @@
 import gameCore from '../../index.js';
 import { getRandomIntInclusive } from '../../helpers.js';
 
-export const stateApp = {
+const explanationMsg = 'What is the result of the expression?';
+
+const stateApp = {
   count: 0,
   name: null,
   historyAnswers: [],
@@ -38,5 +40,5 @@ function generateTask() {
 }
 
 export default () => {
-  gameCore(stateApp, generateTask);
+  gameCore(stateApp, { generateTask, explanationMsg });
 };

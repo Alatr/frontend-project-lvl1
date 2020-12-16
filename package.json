@@ -22,6 +22,7 @@
 		"brain-games": "./bin/brain-games.js",
 		"brain-even": "./bin/brain-even.js",
 		"brain-calc": "./bin/brain-calc.js",
+		"brain-prime": "./bin/brain-prime.js",
 		"brain-progression": "./bin/brain-progression.js",
 		"brain-nod": "./bin/brain-nod.js"
 	},

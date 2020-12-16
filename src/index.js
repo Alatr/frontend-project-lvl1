@@ -19,24 +19,6 @@ let historyQuestions = null;
 let historyAnswers = null;
 let generateTaskFn = null;
 
-function observableCallback(statusApp) {
-  const lastAnswer = getLastAnswer(historyAnswers);
-  /*  */
-  const lastQuestionTask = getLastQuestionTask(historyQuestions);
-  const correctAnswer = getCorrectAnswer(lastQuestionTask);
-  /*  */
-  const name = getName(watchedState);
-
-  if (statusApp === 'askAgain') {
-    askUserAndSaveAnswer();
-    defineNewState();
-    return;
-  }
-  printResultMessage({
-    statusApp, lastAnswer, correctAnswer, name,
-  });
-}
-
 /* abstraction task */
 function generateTaskAndSaveInHistory(createTaskFn) {
   const newTask = createTaskFn();
@@ -99,19 +81,37 @@ function defineNewState() {
     setStatusApp(watchedState, 'askAgain');
   }
 }
+function observableCallback(statusApp) {
+  const lastAnswer = getLastAnswer(historyAnswers);
+  /*  */
+  const lastQuestionTask = getLastQuestionTask(historyQuestions);
+  const correctAnswer = getCorrectAnswer(lastQuestionTask);
+  /*  */
+  const name = getName(watchedState);
 
-export default function gameCore(state, makeTaskFn) {
+  if (statusApp === 'askAgain') {
+    askUserAndSaveAnswer();
+    defineNewState();
+    return;
+  }
+  printResultMessage({
+    statusApp, lastAnswer, correctAnswer, name,
+  });
+}
+
+export default function gameCore(state, { generateTask, explanationMsg }) {
   watchedState = observable(state, observableCallback);
   historyQuestions = getHistoryQuestions(watchedState);
   historyAnswers = getHistoryAnswers(watchedState);
-  generateTaskFn = makeTaskFn;
+  generateTaskFn = generateTask;
 
+  console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?');
   watchedState.name = userName;
 
   console.log(`Hello, ${watchedState.name}!`);
 
-  console.log('What is the result of the expression?');
+  console.log(explanationMsg);
 
   defineNewState();
 }

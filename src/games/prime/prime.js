@@ -1,5 +1,5 @@
 import gameCore from '../../index.js';
-import { getRandomIntInclusive, isEven } from '../../helpers.js';
+import { getRandomIntInclusive, isPrime } from '../../helpers.js';
 
 const stateApp = {
   count: 0,
@@ -9,17 +9,18 @@ const stateApp = {
   state: null, // 'wrongAnswer', 'corectAnswer', 'askAgain', 'greetings',
 
 };
-const explanationMsg = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isEvenStrFormat(number) {
-  return (isEven(number)) ? 'yes' : 'no';
+const explanationMsg = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+function isPrimeStrFormat(number) {
+  return (isPrime(number)) ? 'yes' : 'no';
 }
 
 function generateTask() {
   const randomInt = getRandomIntInclusive(0, 100);
   const newTask = {
     question: randomInt,
-    correctAnswer: isEvenStrFormat(randomInt),
+    correctAnswer: isPrimeStrFormat(randomInt),
   };
   return newTask;
 }

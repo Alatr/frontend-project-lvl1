@@ -1,7 +1,7 @@
 import gameCore from '../../index.js';
 import { getRandomIntInclusive, progression } from '../../helpers.js';
 
-export const stateApp = {
+const stateApp = {
   count: 0,
   name: null,
   historyAnswers: [],
@@ -9,6 +9,8 @@ export const stateApp = {
   state: null, // 'wrongAnswer', 'corectAnswer', 'askAgain', 'greetings',
 
 };
+
+const explanationMsg = 'What number is missing in the progression?';
 
 function progressionListWithHideNum(list, hideInx) {
   const res = list.reduce((acc, el, i) => {
@@ -38,5 +40,5 @@ function generateTask() {
 }
 
 export default () => {
-  gameCore(stateApp, generateTask);
+  gameCore(stateApp, { generateTask, explanationMsg });
 };
