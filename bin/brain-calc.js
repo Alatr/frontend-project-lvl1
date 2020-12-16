@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import dialog from '../src/games/even/even.js';
+import calcGame from '../src/games/calc/calc.js';
 
 console.log('Welcome to the Brain Games!');
 
-dialog();
+calcGame();
