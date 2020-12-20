@@ -6,7 +6,7 @@
 
 ## Brain games includes 5 types game.
 
-* [Parity check](#parity-check) - You need to answer "yes" if the number is even, otherwise answer "no".
+* [Parity check](##parity-check) - You need to answer "yes" if the number is even, otherwise answer "no".
 * [Сalculator](#calculator) - What is the result of the expression?
 * [Greatest common divisor](#greatest-common-divisor) - Find the greatest common divisor of given numbers.
 * [Arithmetic progression](#arithmetic-progression) - What number is missing in the progression?
