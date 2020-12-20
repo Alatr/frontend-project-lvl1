@@ -1,4 +1,4 @@
-![hexlet-check](https://github.com/Alatr/frontend-project-lvl1/workflows/hexlet-check/badge.svg?branch=master)
+[![hexlet-check](https://github.com/Alatr/frontend-project-lvl1/workflows/hexlet-check/badge.svg?branch=master)](https://github.com/Alatr/frontend-project-lvl1/actions?query=workflow%3Ahexlet-check)
 [![Node CI](https://github.com/Alatr/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Alatr/frontend-project-lvl1/actions?query=workflow%3A%22Node+CI%22)
 [![Maintainability](https://api.codeclimate.com/v1/badges/40307f92a1a58ff488d6/maintainability)](https://codeclimate.com/github/Alatr/frontend-project-lvl1/maintainability)
 # Brain games
