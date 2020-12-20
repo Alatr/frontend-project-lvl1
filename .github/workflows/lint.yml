@@ -10,7 +10,7 @@ jobs:
   build:
 
     # The type of machine to run the job on
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       # Node versions list

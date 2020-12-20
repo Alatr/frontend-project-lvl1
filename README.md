@@ -2,46 +2,194 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/40307f92a1a58ff488d6/maintainability)](https://codeclimate.com/github/Alatr/frontend-project-lvl1/maintainability)
 # Brain games
 
-5 games to train your mind, speed of thinking and memory.
+5 console games to train your mind, speed of thinking and memory.
 
-## Brain games includes 5 types game.
+**Table of Contents**
 
-* [Parity check](#parity-check) - You need to answer "yes" if the number is even, otherwise answer "no".
-* [Сalculator](#calculator) - What is the result of the expression?
-* [Greatest common divisor](#greatest-common-divisor) - Find the greatest common divisor of given numbers.
-* [Arithmetic progression](#arithmetic-progression) - What number is missing in the progression?
-* [Is it a prime number?](#is-it-a-prime-number) - You need to answer "yes" if given number is prime. Otherwise answer "no".
+<!-- toc -->
 
-[Сalculator](#calculator)
-[calculator](#calculator)
-- [сalculator](#сalculator)
-- [Titles](#titles)
-## Parity check
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+- [Install](#install)
+- [Game types list](#game-types-list)
+	- [Parity game ](#parity-game)
+		- [usage](#parity-game-usage)
+		- [asciinema](#parity-game-asciinema)
+	- [Сalculator](#calculator-game)
+		- [usage](#calculator-game-usage)
+		- [asciinema](#calculator-game-asciinema)
+	- [Greatest common divisor ](#gcd-game)
+		- [usage](#gcd-game-usage)
+		- [asciinema](#gcd-game-asciinema)
+	- [Arithmetic progression](#arithmetic-progression-game)
+		- [usage](#arithmetic-progression-game-usage)
+		- [asciinema](#arithmetic-progression-game-asciinema)
+	- [Is it a prime number?](#prime-game)
+		- [usage](#prime-game-usage)
+		- [asciinema](#prime-game-asciinema)
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-# сalculator
-Loreлm Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-# Сalculator
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<!-- tocstop -->
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+## Install
 
-#Greatest common divisor
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+```
+make install
+```
+### Game types list
+Brain games includes 5 types game.
+* Parity check
+* Сalculator
+* Greatest common divisor
+* Arithmetic progression
+* Is it a prime number?
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+#### parity game
+It is necessary to implement the game "Parity check". The essence of the game is as follows: a random number is shown to the user. And he needs to answer yes if the number is even, or no if odd:
 
-#Arithmetic progression
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+> Welcome to the Brain Games!
+> May I have your name? Bill
+> Hello, Bill!
+> Answer "yes" if the number is even, otherwise answer "no".
+> Question: 15
+> Your answer: yes
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+In case the user gives an incorrect answer.
+> 'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, Bill!
 
-#Is it a prime number
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+###### parity game usage
+In terminal
+```
+brain-even
+```
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-# Titles
-
+###### parity game asciinema
 [![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+
+
+
+
+#### сalculator game
+It is necessary to implement the game "Calculator". The essence of the game is as follows: the user is shown a random mathematical expression, for example 35 + 16, which must be calculated and written down the correct answer.
+
+> Welcome to the Brain Games!
+> May I have your name? Sam
+> Hello, Sam!
+> What is the result of the expression?
+> Question: 4 + 10
+> Your answer: 14
+> Correct!
+> Question: 25 - 11
+> Your answer: 14
+> Correct!
+> Question: 25 * 7
+> Your answer: 175
+> Correct!
+> Congratulations, Sam!
+
+In case the user gives an incorrect answer.
+> Question: 25 * 7
+> Your answer: 145
+> '145' is wrong answer ;(. Correct answer was '175'.
+> Let's try again, Sam!
+
+###### сalculator game usage
+In terminal
+```
+brain-calc
+```
+###### сalculator game asciinema
+[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+
+
+#### gcd game
+
+It is necessary to implement the game "greatest common divisor (GCD)". The essence of the game is as follows: the user is shown two random numbers, for example, 25 50. The user must calculate and enter the greatest common divisor of these numbers.
+
+> Welcome to the Brain Games!
+> May I have your name? Sam
+> Hello, Sam!
+> Find the greatest common divisor of given numbers.
+> Question: 25 50
+> Your answer: 25
+> Correct!
+> Question: 100 52
+> Your answer: 4
+> Correct!
+> Question: 3 9
+> Your answer: 3
+> Correct!
+> Congratulations, Sam!
+
+In case the user gives an incorrect answer.
+> Question: 25 50
+> Your answer: 1
+> '1' is wrong answer ;(. Correct answer was '25'.
+> Let's try again, Sam!
+
+###### gcd game usage
+In terminal
+```
+brain-gcd
+```
+###### gcd game asciinema
+[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+
+
+
+
+#### arithmetic progression game
+The game shows the player a series of numbers, forming an arithmetic progression, replacing any of the numbers with two dots. The player must determine this number.
+> Welcome to the Brain Games!
+> May I have your name? Sam
+> Hello, Sam!
+> What number is missing in the progression?
+> Question: 5 7 9 11 13 .. 17 19 21 23
+> Your answer: 15
+> Correct!
+> Question: 2 5 8 .. 14 17 20 23 26 29
+> Your answer: 11
+> Correct!
+> Question: 14 19 24 29 34 39 44 49 54 ..
+> Your answer: 59
+> Correct!
+> Congratulations, Sam!
+
+In case the user gives an incorrect answer.
+
+> Question: 5 7 9 11 13 .. 17 19 21 23
+> Your answer: 1
+> '1' is wrong answer ;(. Correct answer was '15'.
+> Let's try again, Sam!
+
+###### arithmetic progression usage
+In terminal
+```
+brain-progression
+```
+###### arithmetic progression asciinema
+[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+
+
+
+
+
+#### prime game
+Player need to check is it a prime number.
+
+> Welcome to the Brain Games!
+> May I have your name? Sam
+> Hello, Sam!
+> Answer "yes" if given number is prime. Otherwise answer "no".
+> Question: 7
+> Your answer: yes
+> Correct!
+
+
+###### prime game usage
+In terminal
+```
+brain-prime
+```
+###### prime game asciinema
+[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+
+
+
