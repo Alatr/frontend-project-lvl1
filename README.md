@@ -44,14 +44,14 @@ Brain games includes 5 types game.
 
 #### parity game
 It is necessary to implement the game "Parity check". The essence of the game is as follows: a random number is shown to the user. And he needs to answer yes if the number is even, or no if odd:
-
-> Welcome to the Brain Games!
-> May I have your name? Bill
-> Hello, Bill!
-> Answer "yes" if the number is even, otherwise answer "no".
-> Question: 15
-> Your answer: yes
-
+```
+Welcome to the Brain Games!
+May I have your name? Bill
+Hello, Bill!
+Answer "yes" if the number is even, otherwise answer "no".
+Question: 15
+Your answer: yes
+```
 In case the user gives an incorrect answer.
 > 'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, Bill!
 
@@ -71,7 +71,7 @@ make brain-even
 It is necessary to implement the game "Calculator". The essence of the game is as follows: the user is shown a random mathematical expression, for example 35 + 16, which must be calculated and written down the correct answer.
 
 > Welcome to the Brain Games!
-> May I have your name? Sam\n
+> May I have your name? Sam
 > Hello, Sam!
 > What is the result of the expression?
 > Question: 4 + 10
