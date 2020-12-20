@@ -71,7 +71,7 @@ make brain-even
 It is necessary to implement the game "Calculator". The essence of the game is as follows: the user is shown a random mathematical expression, for example 35 + 16, which must be calculated and written down the correct answer.
 
 > Welcome to the Brain Games!
-> May I have your name? Sam
+> May I have your name? Sam\n
 > Hello, Sam!
 > What is the result of the expression?
 > Question: 4 + 10
