@@ -3,8 +3,7 @@
 	"version": "0.0.1",
 	"description": "5 console games to train your mind, speed of thinking and memory.",
 	"main": "index.js",
-	"scripts": {
-	},
+	"scripts": {},
 	"engines": {
 		"node": ">=14"
 	},
