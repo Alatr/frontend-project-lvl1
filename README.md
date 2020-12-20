@@ -1,4 +1,4 @@
-![Node CI](https://github.com/Alatr/frontend-project-lvl1/workflows/Node%20CI/badge.svg)
+![Node CI](https://github.com/Alatr/frontend-project-lvl1/actions?query=workflow%3A%22Node+CI%22)
 [![Maintainability](https://api.codeclimate.com/v1/badges/40307f92a1a58ff488d6/maintainability)](https://codeclimate.com/github/Alatr/frontend-project-lvl1/maintainability)
 # Brain games
 
@@ -57,7 +57,7 @@ In case the user gives an incorrect answer.
 ###### parity game usage
 In terminal
 ```
-brain-even
+make brain-even
 ```
 
 ###### parity game asciinema
@@ -66,7 +66,7 @@ brain-even
 
 
 
-#### сalculator game
+#### calculator game
 It is necessary to implement the game "Calculator". The essence of the game is as follows: the user is shown a random mathematical expression, for example 35 + 16, which must be calculated and written down the correct answer.
 
 > Welcome to the Brain Games!
@@ -90,12 +90,12 @@ In case the user gives an incorrect answer.
 > '145' is wrong answer ;(. Correct answer was '175'.
 > Let's try again, Sam!
 
-###### сalculator game usage
+###### calculator game usage
 In terminal
 ```
-brain-calc
+make brain-calc
 ```
-###### сalculator game asciinema
+###### calculator game asciinema
 [![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
 
 
@@ -127,7 +127,7 @@ In case the user gives an incorrect answer.
 ###### gcd game usage
 In terminal
 ```
-brain-gcd
+make brain-gcd
 ```
 ###### gcd game asciinema
 [![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
@@ -162,7 +162,7 @@ In case the user gives an incorrect answer.
 ###### arithmetic progression usage
 In terminal
 ```
-brain-progression
+make brain-progression
 ```
 ###### arithmetic progression asciinema
 [![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
@@ -186,7 +186,7 @@ Player need to check is it a prime number.
 ###### prime game usage
 In terminal
 ```
-brain-prime
+make brain-prime
 ```
 ###### prime game asciinema
 [![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
