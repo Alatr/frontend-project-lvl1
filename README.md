@@ -53,7 +53,9 @@ Question: 15
 Your answer: yes
 ```
 In case the user gives an incorrect answer.
-> 'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, Bill!
+```
+'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, Bill!
+```
 
 ###### parity game usage
 In terminal
@@ -69,28 +71,29 @@ make brain-even
 
 #### calculator game
 It is necessary to implement the game "Calculator". The essence of the game is as follows: the user is shown a random mathematical expression, for example 35 + 16, which must be calculated and written down the correct answer.
-
-> Welcome to the Brain Games!
-> May I have your name? Sam
-> Hello, Sam!
-> What is the result of the expression?
-> Question: 4 + 10
-> Your answer: 14
-> Correct!
-> Question: 25 - 11
-> Your answer: 14
-> Correct!
-> Question: 25 * 7
-> Your answer: 175
-> Correct!
-> Congratulations, Sam!
-
+```
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+What is the result of the expression?
+Question: 4 + 10
+Your answer: 14
+Correct!
+Question: 25 - 11
+Your answer: 14
+Correct!
+Question: 25 * 7
+Your answer: 175
+Correct!
+Congratulations, Sam!
+```
 In case the user gives an incorrect answer.
-> Question: 25 * 7
-> Your answer: 145
-> '145' is wrong answer ;(. Correct answer was '175'.
-> Let's try again, Sam!
-
+```
+Question: 25 * 7
+Your answer: 145
+'145' is wrong answer ;(. Correct answer was '175'.
+Let's try again, Sam!
+```
 ###### calculator game usage
 In terminal
 ```
@@ -103,28 +106,29 @@ make brain-calc
 #### gcd game
 
 It is necessary to implement the game "greatest common divisor (GCD)". The essence of the game is as follows: the user is shown two random numbers, for example, 25 50. The user must calculate and enter the greatest common divisor of these numbers.
-
-> Welcome to the Brain Games!
-> May I have your name? Sam
-> Hello, Sam!
-> Find the greatest common divisor of given numbers.
-> Question: 25 50
-> Your answer: 25
-> Correct!
-> Question: 100 52
-> Your answer: 4
-> Correct!
-> Question: 3 9
-> Your answer: 3
-> Correct!
-> Congratulations, Sam!
-
+```
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+Find the greatest common divisor of given numbers.
+Question: 25 50
+Your answer: 25
+Correct!
+Question: 100 52
+Your answer: 4
+Correct!
+Question: 3 9
+Your answer: 3
+Correct!
+Congratulations, Sam!
+```
 In case the user gives an incorrect answer.
-> Question: 25 50
-> Your answer: 1
-> '1' is wrong answer ;(. Correct answer was '25'.
-> Let's try again, Sam!
-
+```
+Question: 25 50
+Your answer: 1
+'1' is wrong answer ;(. Correct answer was '25'.
+Let's try again, Sam!
+```
 ###### gcd game usage
 In terminal
 ```
@@ -138,28 +142,30 @@ make brain-gcd
 
 #### arithmetic progression game
 The game shows the player a series of numbers, forming an arithmetic progression, replacing any of the numbers with two dots. The player must determine this number.
-> Welcome to the Brain Games!
-> May I have your name? Sam
-> Hello, Sam!
-> What number is missing in the progression?
-> Question: 5 7 9 11 13 .. 17 19 21 23
-> Your answer: 15
-> Correct!
-> Question: 2 5 8 .. 14 17 20 23 26 29
-> Your answer: 11
-> Correct!
-> Question: 14 19 24 29 34 39 44 49 54 ..
-> Your answer: 59
-> Correct!
-> Congratulations, Sam!
+```
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+What number is missing in the progression?
+Question: 5 7 9 11 13 .. 17 19 21 23
+Your answer: 15
+Correct!
+Question: 2 5 8 .. 14 17 20 23 26 29
+Your answer: 11
+Correct!
+Question: 14 19 24 29 34 39 44 49 54 ..
+Your answer: 59
+Correct!
+Congratulations, Sam!
+```
 
 In case the user gives an incorrect answer.
-
-> Question: 5 7 9 11 13 .. 17 19 21 23
-> Your answer: 1
-> '1' is wrong answer ;(. Correct answer was '15'.
-> Let's try again, Sam!
-
+```
+Question: 5 7 9 11 13 .. 17 19 21 23
+Your answer: 1
+'1' is wrong answer ;(. Correct answer was '15'.
+Let's try again, Sam!
+```
 ###### arithmetic progression usage
 In terminal
 ```
@@ -174,15 +180,15 @@ make brain-progression
 
 #### prime game
 Player need to check is it a prime number.
-
-> Welcome to the Brain Games!
-> May I have your name? Sam
-> Hello, Sam!
-> Answer "yes" if given number is prime. Otherwise answer "no".
-> Question: 7
-> Your answer: yes
-> Correct!
-
+```
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+Answer "yes" if given number is prime. Otherwise answer "no".
+Question: 7
+Your answer: yes
+Correct!
+```
 
 ###### prime game usage
 In terminal

@@ -1,1 +1,4 @@
-console.log('Welcome to the Brain Games!');
+#!/usr/bin/env node
+import greating from '../src/games/greating/greating.js';
+
+greating();
