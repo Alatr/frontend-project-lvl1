@@ -1,5 +1,7 @@
 install:
 	npm install
+brain-greatings:
+	node ./bin/brain-greatings.js
 brain-even:
 	node ./bin/brain-even.js
 brain-calc:
