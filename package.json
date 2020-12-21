@@ -2,7 +2,7 @@
 	"name": "@hexlet/brain-games",
 	"version": "0.0.1",
 	"description": "5 console games to train your mind, speed of thinking and memory.",
-	"main": "index.js",
+	"main": "./src/index.js",
 	"scripts": {},
 	"engines": {
 		"node": ">=14"
