@@ -64,7 +64,7 @@ make brain-even
 ```
 
 ###### parity game asciinema
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/inHEOcggog4o8jdnayuWQJqVS.svg)](https://asciinema.org/a/inHEOcggog4o8jdnayuWQJqVS)
 
 
 
@@ -100,7 +100,7 @@ In terminal
 make brain-calc
 ```
 ###### calculator game asciinema
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/FF8KJsAijCwZDflp6CRGlk7wB.svg)](https://asciinema.org/a/FF8KJsAijCwZDflp6CRGlk7wB)
 
 
 #### gcd game
@@ -135,7 +135,7 @@ In terminal
 make brain-gcd
 ```
 ###### gcd game asciinema
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/Qo5mpIeqh48teT2ySLRuncrq2.svg)](https://asciinema.org/a/Qo5mpIeqh48teT2ySLRuncrq2)
 
 
 
@@ -172,7 +172,7 @@ In terminal
 make brain-progression
 ```
 ###### arithmetic progression asciinema
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/TMjVmDevFAznn8aappvBK4v4N.svg)](https://asciinema.org/a/TMjVmDevFAznn8aappvBK4v4N)
 
 
 
@@ -196,7 +196,7 @@ In terminal
 make brain-prime
 ```
 ###### prime game asciinema
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/dRlSlghI9UzSuZHL1Spy2ryd2.svg)](https://asciinema.org/a/dRlSlghI9UzSuZHL1Spy2ryd2)
 
 
 
