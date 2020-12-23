@@ -1,6 +1,4 @@
-// eslint-disable-next-line no-use-before-define
-
-export const getRandomInt = (min, max) => {
+export default (min, max) => {
   const minCeil = Math.ceil(min);
   const maxFloor = Math.floor(max);
   const range = (maxFloor - minCeil + 1);

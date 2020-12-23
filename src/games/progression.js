@@ -1,9 +1,9 @@
 import runGame from '../index.js';
-import { getRandomInt } from '../helper.js';
+import getRandomInt from '../get-random-num.js';
 
-const getProgression = (length, startProgression) => {
+const getProgression = (length, step) => {
   const res = [];
-  for (let i = startProgression; i <= startProgression * length; i += startProgression) {
+  for (let i = step; i <= step * length; i += step) {
     res.push(i);
   }
   return res;
@@ -13,16 +13,14 @@ const gameRule = 'What number is missing in the progression?';
 
 function generateProgressionStringWithHiddenNumber(list, hiddenIndex) {
   const listWithHideElem = list.map((el, i) => (hiddenIndex === i ? '..' : el));
-  const strWithHideElem = listWithHideElem.join(' ');
-
-  return strWithHideElem;
+  return listWithHideElem.join(' ');
 }
 
 function generateGameTask() {
-  const lengthProgression = getRandomInt(5, 10);
-  const hiddenIndex = getRandomInt(0, lengthProgression - 1);
-  const randomStepProgression = getRandomInt(1, 15);
-  const progressionList = getProgression(lengthProgression, randomStepProgression);
+  const progressionLength = getRandomInt(5, 10);
+  const hiddenIndex = getRandomInt(0, progressionLength - 1);
+  const progressionStep = getRandomInt(1, 15);
+  const progressionList = getProgression(progressionLength, progressionStep);
 
   return {
     question: `Question: ${generateProgressionStringWithHiddenNumber(progressionList, hiddenIndex)}`,

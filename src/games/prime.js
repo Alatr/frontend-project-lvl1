@@ -1,7 +1,8 @@
 import runGame from '../index.js';
-import { getRandomInt } from '../helper.js';
+import getRandomInt from '../get-random-num.js';
 
 const isPrime = (num) => {
+  if (num < 2) return false;
   const sqrtnum = Math.sqrt(num);
   for (let i = 2; i <= sqrtnum; i += 1) {
     if (num % i === 0) {

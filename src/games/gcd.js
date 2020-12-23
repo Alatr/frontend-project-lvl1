@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import { getRandomInt } from '../helper.js';
+import getRandomInt from '../get-random-num.js';
 
 const getGCD = (x, y) => {
   if (y > x) return getGCD(y, x);

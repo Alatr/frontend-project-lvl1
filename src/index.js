@@ -1,4 +1,4 @@
-import { log, getAnswer } from './game-cli.js';
+import { log, getAnswer } from './cli.js';
 
 export default function runGame({ generateGameTask, gameRule }) {
   log('Welcome to the Brain Games!');
