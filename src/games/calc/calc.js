@@ -3,15 +3,6 @@ import { getRandomIntInclusive } from '../../helpers.js';
 
 const explanationMsg = 'What is the result of the expression?';
 
-const stateApp = {
-  count: 0,
-  name: null,
-  historyAnswers: [],
-  historyQuestion: [],
-  state: null, // 'wrongAnswer', 'corectAnswer', 'askAgain', 'greetings',
-
-};
-
 const operations = [
   {
     label: '+',
@@ -40,5 +31,5 @@ function generateTask() {
 }
 
 export default () => {
-  gameCore(stateApp, { generateTask, explanationMsg });
+  gameCore({ generateTask, explanationMsg });
 };

@@ -22,7 +22,7 @@
 		- [asciinema](#gcd-game-asciinema)
 	- [Arithmetic progression](#arithmetic-progression-game)
 		- [usage](#arithmetic-progression-game-usage)
-		- [asciinema](#arithmetic-progression-game-asciinema)
+		- [asciinema](#arithmetic-progression-asciinema)
 	- [Is it a prime number?](#prime-game)
 		- [usage](#prime-game-usage)
 		- [asciinema](#prime-game-asciinema)

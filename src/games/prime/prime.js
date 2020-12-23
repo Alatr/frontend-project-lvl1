@@ -1,15 +1,6 @@
 import gameCore from '../../index.js';
 import { getRandomIntInclusive, isPrime } from '../../helpers.js';
 
-const stateApp = {
-  count: 0,
-  name: null,
-  historyAnswers: [],
-  historyQuestion: [],
-  state: null, // 'wrongAnswer', 'corectAnswer', 'askAgain', 'greetings',
-
-};
-
 const explanationMsg = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrimeStrFormat(number) {
@@ -26,5 +17,5 @@ function generateTask() {
 }
 
 export default () => {
-  gameCore(stateApp, { generateTask, explanationMsg });
+  gameCore({ generateTask, explanationMsg });
 };

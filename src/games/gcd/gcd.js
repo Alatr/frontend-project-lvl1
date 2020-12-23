@@ -2,14 +2,6 @@ import gameCore from '../../index.js';
 import { getRandomIntInclusive, NOD } from '../../helpers.js';
 
 const explanationMsg = 'Find the greatest common divisor of given numbers.';
-const stateApp = {
-  count: 0,
-  name: null,
-  historyAnswers: [],
-  historyQuestion: [],
-  state: null, // 'wrongAnswer', 'corectAnswer', 'askAgain', 'greetings',
-
-};
 
 function generateTask() {
   const randomInt1 = getRandomIntInclusive(0, 100);
@@ -22,5 +14,5 @@ function generateTask() {
 }
 
 export default () => {
-  gameCore(stateApp, { generateTask, explanationMsg });
+  gameCore({ generateTask, explanationMsg });
 };

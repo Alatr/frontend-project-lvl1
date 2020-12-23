@@ -1,14 +1,6 @@
 import gameCore from '../../index.js';
 import { getRandomIntInclusive, isEven } from '../../helpers.js';
 
-const stateApp = {
-  count: 0,
-  name: null,
-  historyAnswers: [],
-  historyQuestion: [],
-  state: null, // 'wrongAnswer', 'corectAnswer', 'askAgain', 'greetings',
-
-};
 const explanationMsg = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEvenStrFormat(number) {
@@ -25,5 +17,5 @@ function generateTask() {
 }
 
 export default () => {
-  gameCore(stateApp, { generateTask, explanationMsg });
+  gameCore({ generateTask, explanationMsg });
 };

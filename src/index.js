@@ -1,117 +1,38 @@
 import readlineSync from 'readline-sync';
-import { observable } from './helpers.js';
-import {
-  getName, getCntAnswer, incCntAnswer, setStatusApp, printResultMessage, askUser,
-} from './interfaces/state.js';
-import {
-  isEmptyHistoryAnswers, getHistoryAnswers, getLastAnswer, setNewAnswerInHistoryAnswers,
-} from './interfaces/answer.js';
-import {
-  getCorrectAnswer,
-  getHistoryQuestions,
-  getLastQuestionTask,
-  getQuestion,
-  setNewTaskInHistoryQuestions,
-} from './interfaces/task.js';
 
-let watchedState = null;
-let historyQuestions = null;
-let historyAnswers = null;
+let correctAnswerCnt = 0;
+let userName = null;
 let generateTaskFn = null;
 
-/* abstraction task */
-function generateTaskAndSaveInHistory(createTaskFn) {
-  const newTask = createTaskFn();
-  setNewTaskInHistoryQuestions(newTask, historyQuestions);
-}
+function defineNextStep() {
+  if (correctAnswerCnt === 3) {
+    console.log(`Congratulations, ${userName}!`);
+    return;
+  }
 
-function askUserAndSaveAnswer() {
-  generateTaskAndSaveInHistory(generateTaskFn);
-  const lastQuestionTask = getLastQuestionTask(historyQuestions);
-  const question = getQuestion(lastQuestionTask);
+  const task = generateTaskFn();
 
-  askUser(question);
-
+  console.log(task.question);
   const answer = readlineSync.question('Your answer:');
-  setNewAnswerInHistoryAnswers(answer, historyAnswers);
-}
 
-function firstLaunch() {
-  askUserAndSaveAnswer();
-
-  const lastAnswer = getLastAnswer(historyAnswers);
-  /*  */
-  const lastQuestionTask = getLastQuestionTask(historyQuestions);
-  const correctAnswer = getCorrectAnswer(lastQuestionTask);
-  /*  */
-
-  if (lastAnswer === correctAnswer) {
-    incCntAnswer(watchedState);
-    setStatusApp(watchedState, 'corectAnswer');
-    setStatusApp(watchedState, 'askAgain');
+  if (answer === task.correctAnswer) {
+    correctAnswerCnt += 1;
+    console.log('Correct!');
+    defineNextStep();
     return;
   }
-  setStatusApp(watchedState, 'wrongAnswer');
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${task.correctAnswer}'.`);
+  console.log(`Let's try again, ${userName}!`);
 }
 
-function defineNewState() {
-  /*  */
-  if (isEmptyHistoryAnswers(historyAnswers)) {
-    firstLaunch();
-    return;
-  }
-  /*  */
-  const lastAnswer = getLastAnswer(historyAnswers);
-  const lastQuestionTask = getLastQuestionTask(historyQuestions);
-  const correctAnswer = getCorrectAnswer(lastQuestionTask);
-
-  if (lastAnswer !== correctAnswer) {
-    setStatusApp(watchedState, 'wrongAnswer');
-    return;
-  }
-
-  if (lastAnswer === correctAnswer) {
-    incCntAnswer(watchedState);
-    setStatusApp(watchedState, 'corectAnswer');
-
-    if (getCntAnswer(watchedState) === 3) {
-      setStatusApp(watchedState, 'greetings');
-      return;
-    }
-    setStatusApp(watchedState, 'askAgain');
-  }
-}
-function observableCallback(statusApp) {
-  const lastAnswer = getLastAnswer(historyAnswers);
-  /*  */
-  const lastQuestionTask = getLastQuestionTask(historyQuestions);
-  const correctAnswer = getCorrectAnswer(lastQuestionTask);
-  /*  */
-  const name = getName(watchedState);
-
-  if (statusApp === 'askAgain') {
-    askUserAndSaveAnswer();
-    defineNewState();
-    return;
-  }
-  printResultMessage({
-    statusApp, lastAnswer, correctAnswer, name,
-  });
-}
-
-export default function gameCore(state, { generateTask, explanationMsg }) {
-  watchedState = observable(state, observableCallback);
-  historyQuestions = getHistoryQuestions(watchedState);
-  historyAnswers = getHistoryAnswers(watchedState);
+export default function gameCore({ generateTask, explanationMsg }) {
   generateTaskFn = generateTask;
 
   console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name?');
-  watchedState.name = userName;
+  userName = readlineSync.question('May I have your name?');
 
-  console.log(`Hello, ${watchedState.name}!`);
-
+  console.log(`Hello, ${userName}!`);
   console.log(explanationMsg);
 
-  defineNewState();
+  defineNextStep();
 }
