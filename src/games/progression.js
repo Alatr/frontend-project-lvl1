@@ -15,11 +15,11 @@ function generateGameTask() {
   const progressionLength = getRandomNum(5, 10);
   const hiddenIndex = getRandomNum(0, progressionLength - 1);
   const progressionStep = getRandomNum(1, 15);
-  const progressionList = getProgression(progressionLength, progressionStep);
+  const progression = getProgression(progressionLength, progressionStep);
 
   return {
-    question: progressionList.map((el, i) => (hiddenIndex === i ? '..' : el)).join(' '),
-    correctAnswer: `${progressionList[hiddenIndex]}`,
+    question: progression.map((el, i) => (hiddenIndex === i ? '..' : el)).join(' '),
+    correctAnswer: `${progression[hiddenIndex]}`,
   };
 }
 
