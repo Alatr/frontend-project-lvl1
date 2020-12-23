@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import getRandomInt from '../get-random-num.js';
+import getRandomNum from '../get-random-num.js';
 
 const gameRule = 'What is the result of the expression?';
 
@@ -19,13 +19,13 @@ const operations = [
 ];
 
 function generateGameTask() {
-  const randomIntOperationIndex = getRandomInt(0, operations.length - 1);
-  const randomOperator1 = getRandomInt(0, 10);
-  const randomOperator2 = getRandomInt(0, 10);
+  const randomIntOperationIndex = getRandomNum(0, operations.length - 1);
+  const randomOperator1 = getRandomNum(0, 10);
+  const randomOperator2 = getRandomNum(0, 10);
   const operation = operations[randomIntOperationIndex];
 
   return {
-    question: `Question: ${randomOperator1} ${operation.label} ${randomOperator2}`,
+    question: `${randomOperator1} ${operation.label} ${randomOperator2}`,
     correctAnswer: `${operation.formula(randomOperator1, randomOperator2)}`,
   };
 }

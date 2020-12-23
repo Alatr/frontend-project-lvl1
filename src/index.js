@@ -15,7 +15,7 @@ export default function runGame({ generateGameTask, gameRule }) {
 
     const task = generateGameTask();
 
-    log(task.question);
+    log(`Question: ${task.question}`);
     const answer = getAnswer('Your answer:');
 
     if (answer !== task.correctAnswer) {

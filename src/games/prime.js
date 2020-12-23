@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import getRandomInt from '../get-random-num.js';
+import getRandomNum from '../get-random-num.js';
 
 const isPrime = (num) => {
   if (num < 2) return false;
@@ -9,16 +9,16 @@ const isPrime = (num) => {
       return false;
     }
   }
-  return num !== 1;
+  return false;
 };
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function generateGameTask() {
-  const randomNumber = getRandomInt(0, 100);
+  const randomNumber = getRandomNum(0, 100);
   return {
-    question: `Question: ${randomNumber}`,
-    correctAnswer: (isPrime(randomNumber)) ? 'yes' : 'no',
+    question: randomNumber,
+    correctAnswer: isPrime(randomNumber) ? 'yes' : 'no',
   };
 }
 

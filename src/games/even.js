@@ -1,15 +1,15 @@
 import runGame from '../index.js';
-import getRandomInt from '../get-random-num.js';
+import getRandomNum from '../get-random-num.js';
 
 export const isEven = (number) => (number % 2 === 0);
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function generateGameTask() {
-  const randomNumber = getRandomInt(0, 100);
+  const randomNumber = getRandomNum(0, 100);
   return {
-    question: `Question: ${randomNumber}`,
-    correctAnswer: (isEven(randomNumber)) ? 'yes' : 'no',
+    question: randomNumber,
+    correctAnswer: isEven(randomNumber) ? 'yes' : 'no',
   };
 }
 
