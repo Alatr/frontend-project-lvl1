@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import getRandomInt from '../helper.js';
+import { getRandomInt } from '../helper.js';
 
 const isPrime = (num) => {
   const sqrtnum = Math.sqrt(num);
