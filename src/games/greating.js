@@ -1,7 +1,7 @@
-import readlineSync from 'readline-sync';
+import { log, getAnswer } from '../game-cli.js';
 
 export default () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  log('Welcome to the Brain Games!');
+  const name = getAnswer('May I have your name? ');
+  log(`Hello, ${name}!`);
 };
