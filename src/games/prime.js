@@ -2,14 +2,10 @@ import runGame from '../index.js';
 import getRandomNum from '../get-random-num.js';
 
 const isPrime = (num) => {
-  if (num < 2) return false;
-  const sqrtnum = Math.sqrt(num);
-  for (let i = 2; i <= sqrtnum; i += 1) {
-    if (num % i === 0) {
-      return false;
-    }
+  for (let i = 2; i < num; i + 1) {
+    if (num % i === 0) return false;
   }
-  return false;
+  return num > 1;
 };
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
