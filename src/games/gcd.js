@@ -1,24 +1,23 @@
-import gameCore from '../index.js';
-import getRandomInt from '../helpers.js';
+import runGame from '../index.js';
+import { getRandomInt } from '../helpers.js';
 
-const GCD = (x, y) => {
-  if (y > x) return GCD(y, x);
+const getGCD = (x, y) => {
+  if (y > x) return getGCD(y, x);
   if (y === 0) return x;
-  return GCD(y, x % y);
+  return getGCD(y, x % y);
 };
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-function generateTask() {
+function generateGameTask() {
   const randomNumber1 = getRandomInt(0, 100);
   const randomNumber2 = getRandomInt(0, 100);
-  const newTask = {
+  return {
     question: `Question: ${randomNumber1} ${randomNumber2}`,
-    correctAnswer: `${GCD(randomNumber1, randomNumber2)}`,
+    correctAnswer: `${getGCD(randomNumber1, randomNumber2)}`,
   };
-  return newTask;
 }
 
 export default () => {
-  gameCore({ generateTask, gameRule });
+  runGame({ generateGameTask, gameRule });
 };

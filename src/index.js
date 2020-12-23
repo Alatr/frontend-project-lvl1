@@ -1,30 +1,30 @@
-import readlineSync from 'readline-sync';
+import { log, getAnswer } from './game-cli.js';
 
-export default function runGame({ generateTask, gameRule }) {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name?');
+export default function runGame({ generateGameTask, gameRule }) {
+  log('Welcome to the Brain Games!');
+  const userName = getAnswer('May I have your name?');
 
-  console.log(`Hello, ${userName}!`);
-  console.log(gameRule);
+  log(`Hello, ${userName}!`);
+  log(gameRule);
 
-  function runGameStep(correctAnswerCnt = 0) {
-    if (correctAnswerCnt === 3) {
-      console.log(`Congratulations, ${userName}!`);
+  function runGameStep(correctAnswersCount = 0) {
+    if (correctAnswersCount === 3) {
+      log(`Congratulations, ${userName}!`);
       return;
     }
 
-    const task = generateTask();
+    const task = generateGameTask();
 
-    console.log(task.question);
-    const answer = readlineSync.question('Your answer:');
+    log(task.question);
+    const answer = getAnswer('Your answer:');
 
     if (answer !== task.correctAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${task.correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
+      log(`'${answer}' is wrong answer ;(. Correct answer was '${task.correctAnswer}'.`);
+      log(`Let's try again, ${userName}!`);
       return;
     }
-    console.log('Correct!');
-    runGameStep(correctAnswerCnt + 1);
+    log('Correct!');
+    runGameStep(correctAnswersCount + 1);
   }
 
   runGameStep();

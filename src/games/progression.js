@@ -1,9 +1,9 @@
-import gameCore from '../index.js';
-import getRandomInt from '../helpers.js';
+import runGame from '../index.js';
+import { getRandomInt } from '../helpers.js';
 
-const progression = (length, progressionNum) => {
+const getProgression = (length, startProgression) => {
   const res = [];
-  for (let i = progressionNum; i <= progressionNum * length; i += progressionNum) {
+  for (let i = startProgression; i <= startProgression * length; i += startProgression) {
     res.push(i);
   }
   return res;
@@ -11,26 +11,25 @@ const progression = (length, progressionNum) => {
 
 const gameRule = 'What number is missing in the progression?';
 
-function progressionListWithHideNum(list, hideInx) {
-  const listWithHideElem = list.map((el, i) => (hideInx === i ? '..' : el));
+function generateProgressionStringWithHiddenNumber(list, hiddenIndex) {
+  const listWithHideElem = list.map((el, i) => (hiddenIndex === i ? '..' : el));
   const strWithHideElem = listWithHideElem.join(' ');
 
   return strWithHideElem;
 }
 
-function generateTask() {
-  const sizeProgression = getRandomInt(5, 10);
-  const hideInx = getRandomInt(0, sizeProgression - 1);
-  const randomNumberProgression = getRandomInt(1, 15);
-  const progressionList = progression(sizeProgression, randomNumberProgression);
+function generateGameTask() {
+  const lengthProgression = getRandomInt(5, 10);
+  const hiddenIndex = getRandomInt(0, lengthProgression - 1);
+  const randomStepProgression = getRandomInt(1, 15);
+  const progressionList = getProgression(lengthProgression, randomStepProgression);
 
-  const newTask = {
-    question: `Question: ${progressionListWithHideNum(progressionList, hideInx)}`,
-    correctAnswer: `${progressionList[hideInx]}`,
+  return {
+    question: `Question: ${generateProgressionStringWithHiddenNumber(progressionList, hiddenIndex)}`,
+    correctAnswer: `${progressionList[hiddenIndex]}`,
   };
-  return newTask;
 }
 
 export default () => {
-  gameCore({ generateTask, gameRule });
+  runGame({ generateGameTask, gameRule });
 };

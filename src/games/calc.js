@@ -1,5 +1,5 @@
-import gameCore from '../index.js';
-import getRandomInt from '../helpers.js';
+import runGame from '../index.js';
+import { getRandomInt } from '../helpers.js';
 
 const gameRule = 'What is the result of the expression?';
 
@@ -18,18 +18,18 @@ const operations = [
   },
 ];
 
-function generateTask() {
-  const randomIntOperationInx = getRandomInt(0, operations.length - 1);
-  const randomOperators1 = getRandomInt(0, 10);
-  const randomOperators2 = getRandomInt(0, 10);
-  const operation = operations[randomIntOperationInx];
-  const task = {
-    question: `Question: ${randomOperators1} ${operation.label} ${randomOperators2}`,
-    correctAnswer: `${operation.formula(randomOperators1, randomOperators2)}`,
+function generateGameTask() {
+  const randomIntOperationIndex = getRandomInt(0, operations.length - 1);
+  const randomOperator1 = getRandomInt(0, 10);
+  const randomOperator2 = getRandomInt(0, 10);
+  const operation = operations[randomIntOperationIndex];
+
+  return {
+    question: `Question: ${randomOperator1} ${operation.label} ${randomOperator2}`,
+    correctAnswer: `${operation.formula(randomOperator1, randomOperator2)}`,
   };
-  return task;
 }
 
 export default () => {
-  gameCore({ generateTask, gameRule });
+  runGame({ generateGameTask, gameRule });
 };
