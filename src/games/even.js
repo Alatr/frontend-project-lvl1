@@ -8,7 +8,7 @@ const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 function generateTask() {
   const randomNumber = getRandomInt(0, 100);
   const newTask = {
-    question: randomNumber,
+    question: `Question: ${randomNumber}`,
     correctAnswer: (isEven(randomNumber)) ? 'yes' : 'no',
   };
   return newTask;

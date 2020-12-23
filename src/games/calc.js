@@ -24,7 +24,7 @@ function generateTask() {
   const randomOperators2 = getRandomInt(0, 10);
   const operation = operations[randomIntOperationInx];
   const task = {
-    question: `${randomOperators1} ${operation.label} ${randomOperators2}`,
+    question: `Question: ${randomOperators1} ${operation.label} ${randomOperators2}`,
     correctAnswer: `${operation.formula(randomOperators1, randomOperators2)}`,
   };
   return task;

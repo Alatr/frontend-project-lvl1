@@ -16,7 +16,7 @@ const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 function generateTask() {
   const randomNumber = getRandomInt(0, 100);
   const newTask = {
-    question: randomNumber,
+    question: `Question: ${randomNumber}`,
     correctAnswer: (isPrime(randomNumber)) ? 'yes' : 'no',
   };
   return newTask;

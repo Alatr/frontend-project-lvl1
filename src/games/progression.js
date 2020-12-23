@@ -25,7 +25,7 @@ function generateTask() {
   const progressionList = progression(sizeProgression, randomNumberProgression);
 
   const newTask = {
-    question: progressionListWithHideNum(progressionList, hideInx),
+    question: `Question: ${progressionListWithHideNum(progressionList, hideInx)}`,
     correctAnswer: `${progressionList[hideInx]}`,
   };
   return newTask;
