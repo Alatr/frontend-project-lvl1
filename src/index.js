@@ -1,10 +1,8 @@
 import readlineSync from 'readline-sync';
 
 let correctAnswerCnt = 0;
-let userName = null;
-let generateTaskFn = null;
 
-function defineNextStep() {
+function defineNextStep(generateTaskFn, userName) {
   if (correctAnswerCnt === 3) {
     console.log(`Congratulations, ${userName}!`);
     return;
@@ -18,7 +16,7 @@ function defineNextStep() {
   if (answer === task.correctAnswer) {
     correctAnswerCnt += 1;
     console.log('Correct!');
-    defineNextStep();
+    defineNextStep(generateTaskFn, userName);
     return;
   }
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${task.correctAnswer}'.`);
@@ -26,13 +24,11 @@ function defineNextStep() {
 }
 
 export default function gameCore({ generateTask, explanationMsg }) {
-  generateTaskFn = generateTask;
-
   console.log('Welcome to the Brain Games!');
-  userName = readlineSync.question('May I have your name?');
+  const userName = readlineSync.question('May I have your name?');
 
   console.log(`Hello, ${userName}!`);
   console.log(explanationMsg);
 
-  defineNextStep();
+  defineNextStep(generateTask, userName);
 }
