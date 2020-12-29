@@ -13,6 +13,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hexlet project check
-        uses: hexlet/project-action@release
-        with:
-          hexlet-id: ${{ secrets.HEXLET_ID }}
+          uses: hexlet/project-action@release
+          with:
+            hexlet-id: ${{ secrets.HEXLET_ID }}
