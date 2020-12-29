@@ -1,37 +1,37 @@
 {
-	"name": "@hexlet/brain-games",
-	"version": "0.0.1",
-	"description": "5 console games to train your mind, speed of thinking and memory.",
-	"main": "./src/index.js",
-	"scripts": {},
-	"engines": {
-		"node": ">=14"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Alatr/frontend-project-lvl1.git"
-	},
-	"author": "Dmitriy Lukianov",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Alatr/frontend-project-lvl1/issues"
-	},
-	"bin": {
-		"brain-games": "./bin/brain-games.js",
-		"brain-even": "./bin/brain-even.js",
-		"brain-calc": "./bin/brain-calc.js",
-		"brain-prime": "./bin/brain-prime.js",
-		"brain-progression": "./bin/brain-progression.js",
-		"brain-gcd": "./bin/brain-gcd.js"
-	},
-	"type": "module",
-	"homepage": "https://github.com/Alatr/frontend-project-lvl1#readme",
-	"dependencies": {
-		"readline-sync": "^1.4.10"
-	},
-	"devDependencies": {
-		"eslint": "^7.15.0",
-		"eslint-config-airbnb-base": "^14.2.1",
-		"eslint-plugin-import": "^2.22.1"
-	}
+  "name": "@hexlet/brain-games",
+  "version": "0.0.1",
+  "description": "5 console games to train your mind, speed of thinking and memory.",
+  "main": "./src/index.js",
+  "scripts": {},
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alatr/frontend-project-lvl1.git"
+  },
+  "author": "Dmitriy Lukianov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alatr/frontend-project-lvl1/issues"
+  },
+  "bin": {
+    "brain-games": "./bin/brain-games.js",
+    "brain-even": "./bin/brain-even.js",
+    "brain-calc": "./bin/brain-calc.js",
+    "brain-prime": "./bin/brain-prime.js",
+    "brain-progression": "./bin/brain-progression.js",
+    "brain-gcd": "./bin/brain-gcd.js"
+  },
+  "type": "module",
+  "homepage": "https://github.com/Alatr/frontend-project-lvl1#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
 }

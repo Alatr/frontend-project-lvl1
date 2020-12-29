@@ -1,6 +1,7 @@
 import { log, getAnswer } from './cli.js';
 
 export default function runGame({ generateGameTask, gameRule }) {
+  const roundCount = 3;
   log('Welcome to the Brain Games!');
   const userName = getAnswer('May I have your name?');
 
@@ -8,7 +9,7 @@ export default function runGame({ generateGameTask, gameRule }) {
   log(gameRule);
 
   function runGameStep(correctAnswersCount = 0) {
-    if (correctAnswersCount === 3) {
+    if (correctAnswersCount === roundCount) {
       log(`Congratulations, ${userName}!`);
       return;
     }
